@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion } from 'framer-motion';
-import Link from "next/link" ;
+import Link from "next/link";
 
 const Navbar = () => {
   const [isClick, setisClick] = useState(false);
@@ -12,20 +12,16 @@ const Navbar = () => {
     setisClick(!isClick);
   };
 
-  const handleScroll = () => { 
+  const handleScroll = useCallback(() => { 
     const currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      setIsVisible(true);  
-    } else {
-      setIsVisible(false);   
-    }
+    setIsVisible(prevScrollPos > currentScrollPos);  
     setPrevScrollPos(currentScrollPos);
-  };
+  }, [prevScrollPos]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  }, [handleScroll]); // Include handleScroll in the dependency array
 
   return (
     <>
@@ -113,43 +109,43 @@ const Navbar = () => {
         </div> 
         {isClick && (
           <motion.div
-          initial={{ y: -100, opacity: 0 }}   
-          animate={{ y: 0, opacity: 1 }}     
-          exit={{ y: -100, opacity: 0 }}     
-          transition={{ type: "spring"}} 
+            initial={{ y: -100, opacity: 0 }}   
+            animate={{ y: 0, opacity: 1 }}     
+            exit={{ y: -100, opacity: 0 }}     
+            transition={{ type: "spring"}} 
           >
-          <div className="md:hidden">
-            <div className="px-2 pt-3 pb-3 space-y-1 sm:px-3">
-              <a
-                href="/"
-                className="text-white block p-2 hover:text-[#00fdaa] relative group"
-              >
-                Home
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#00fdaa] transition-all duration-500 group-hover:w-full"></span>
-              </a>
-              <a
-                href="/about"
-                className="text-white block p-2 hover:text-[#00fdaa] relative group"
-              >
-                About
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#00fdaa] transition-all duration-500 group-hover:w-full"></span>
-              </a>
-              <a
-                href="/services"
-                className="text-white block p-2 hover:text-[#00fdaa] relative group"
-              >
-                Services
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#00fdaa] transition-all duration-500 group-hover:w-full"></span>
-              </a>
-              <a
-                href="/contact"
-                className="text-white block p-2 hover:text-[#00fdaa] relative group"
-              >
-                Contact
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#00fdaa] transition-all duration-500 group-hover:w-full"></span>
-              </a>
+            <div className="md:hidden">
+              <div className="px-2 pt-3 pb-3 space-y-1 sm:px-3">
+                <a
+                  href="/"
+                  className="text-white block p-2 hover:text-[#00fdaa] relative group"
+                >
+                  Home
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#00fdaa] transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a
+                  href="/about"
+                  className="text-white block p-2 hover:text-[#00fdaa] relative group"
+                >
+                  About
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#00fdaa] transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a
+                  href="/services"
+                  className="text-white block p-2 hover:text-[#00fdaa] relative group"
+                >
+                  Services
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#00fdaa] transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a
+                  href="/contact"
+                  className="text-white block p-2 hover:text-[#00fdaa] relative group"
+                >
+                  Contact
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#00fdaa] transition-all duration-500 group-hover:w-full"></span>
+                </a>
+              </div>
             </div>
-          </div>
           </motion.div>
         )}
         

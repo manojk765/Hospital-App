@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function About() {
   return (
@@ -14,23 +15,32 @@ function About() {
       </div>
 
       <div className='flex flex-wrap justify-center gap-6 p-6'>
-        <img
-          className='w-full sm:w-1/3 md:w-1/4 shadow-lg hover:shadow-2xl'
-          src="https://media.istockphoto.com/id/1454794642/photo/empty-corridor-hospital.webp?s=2048x2048&w=is&k=20&c=G5Sp6FTRKA-VIFqLTQmcIZwyMmlyh1OabpGC8Kx87IM="
-          alt="Hospital Corridor"
-        />
+        <div className='w-full sm:w-1/3 md:w-1/4 shadow-lg hover:shadow-2xl relative h-48'> {/* Set a height */}
+          <Image
+            src="https://media.istockphoto.com/id/1454794642/photo/empty-corridor-hospital.webp?s=2048x2048&w=is&k=20&c=G5Sp6FTRKA-VIFqLTQmcIZwyMmlyh1OabpGC8Kx87IM="
+            alt="Hospital Corridor"
+            layout='fill'
+            objectFit='cover'
+          />
+        </div>
         
-        <img
-          className='w-full sm:w-1/3 md:w-1/4 shadow-lg hover:shadow-2xl'
-          src="https://media.istockphoto.com/id/1326890978/photo/shot-of-an-empty-hallway-in-a-lab.jpg?s=2048x2048&w=is&k=20&c=HpyPFk2bs5pxOTvEIeBQ73eSAXN9QlrIHGNY6y5kql4="
-          alt="Lab Hallway"
-        />
+        <div className='w-full sm:w-1/3 md:w-1/4 shadow-lg hover:shadow-2xl relative h-48'> {/* Set a height */}
+          <Image
+            src="https://media.istockphoto.com/id/1326890978/photo/shot-of-an-empty-hallway-in-a-lab.jpg?s=2048x2048&w=is&k=20&c=HpyPFk2bs5pxOTvEIeBQ73eSAXN9QlrIHGNY6y5kql4="
+            alt="Lab Hallway"
+            layout='fill'
+            objectFit='cover'
+          />
+        </div>
 
-        <img
-          className='w-full sm:w-1/3 md:w-1/4 shadow-lg hover:shadow-2xl'
-          src="https://media.istockphoto.com/id/1454794642/photo/empty-corridor-hospital.webp?s=2048x2048&w=is&k=20&c=G5Sp6FTRKA-VIFqLTQmcIZwyMmlyh1OabpGC8Kx87IM="
-          alt="Hospital Corridor"
-        />
+        <div className='w-full sm:w-1/3 md:w-1/4 shadow-lg hover:shadow-2xl relative h-48'> {/* Set a height */}
+          <Image
+            src="https://media.istockphoto.com/id/1454794642/photo/empty-corridor-hospital.webp?s=2048x2048&w=is&k=20&c=G5Sp6FTRKA-VIFqLTQmcIZwyMmlyh1OabpGC8Kx87IM="
+            alt="Hospital Corridor"
+            layout='fill'
+            objectFit='cover'
+          />
+        </div>
       </div>
     </div>
   );

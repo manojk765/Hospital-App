@@ -11,6 +11,7 @@ import 'swiper/css/autoplay';
 
 // Import required modules
 import { Navigation, Autoplay } from 'swiper/modules';
+import Image from 'next/image'; // Import the Image component
 
 export default function Testimonials() {
   const images = [
@@ -41,7 +42,15 @@ export default function Testimonials() {
         {images.map((image, index) => (
           <SwiperSlide key={index} className='flex flex-col justify-center items-center relative'>
             <div className="mb-4 flex justify-center items-center">
-              <img src={image} alt={`Slide ${index + 1}`} className='w-32 h-32 object-cover rounded-full shadow-lg' />
+              <div className='w-32 h-32 relative'>
+                <Image
+                  src={image}
+                  alt={`Slide ${index + 1}`}
+                  layout='fill'
+                  objectFit='cover'
+                  className='rounded-full shadow-lg'
+                />
+              </div>
             </div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-black text-center p-4 bg-opacity-70 mt-8"> 
               <h1 className='text-3xl font-bold'>{head[index]}</h1>
