@@ -98,39 +98,18 @@ const ContactUs = () => {
         }
     };
 
-    const text = "Get In touch with us";
-
     return (
         <motion.div
-            className="h-full p-16 bg-gradient-to-br from-purple-50 to-pink-50"
+            className="h-full p-4 lg:p-16 bg-gradient-to-br from-purple-50 to-pink-50"
             initial={{ y: "-200vh" }}
             animate={{ y: "0%" }}
             transition={{ duration: 1 }}
         >
-            <div className='h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 justify-center items-center gap-8'>
-                <div className='h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl'>
-                    <div>
-                        {text.split("").map((letter, index) => (
-                            <motion.span
-                                key={index}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{
-                                    duration: 10,
-                                    delay: index * 0.3,
-                                    repeat: Infinity,
-                                }}
-                                style={{ display: "inline-block" }}
-                            >
-                                {letter}
-                            </motion.span>
-                        ))}
-                    </div>
-                </div>
+            <div className='flex flex-col lg:flex-row lg:px-20 justify-center items-center gap-8'>
                 <form 
                     ref={form}
                     onSubmit={sendEmail}
-                    className='h-1/2 lg:h-full lg:w-1/2 bg-white rounded-xl text-xl flex flex-col justify-center gap-8 p-16'
+                    className='lg:w-1/2 bg-white rounded-xl text-xl flex flex-col justify-center gap-4 p-8 shadow-lg'
                 >
                     <span>Name</span>
                     <input
@@ -143,7 +122,7 @@ const ContactUs = () => {
                     />
                     {errors.name && <span className='text-red-500 text-sm'>{errors.name}</span>}
 
-                    <span>Mail</span>
+                    <span>Email</span>
                     <input
                         type='text'
                         name='email'
@@ -196,6 +175,26 @@ const ContactUs = () => {
                     {success && <span className='text-green-500 font-semibold'>Your message was sent successfully</span>}
                     {error && <span className='text-red-500 font-semibold'>Please fill out all fields correctly</span>}
                 </form>
+
+                <div className='lg:w-1/2 flex flex-col items-left'>
+                    <h2 className='text-2xl font-bold mb-4'>Locate Us</h2>
+                    <div className='w-full h-0 pb-[56.25%] relative'>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1815877.8119214675!2d76.99881193341419!3d27.26193221456775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736c33ec1f2ad5%3A0xfebd31be337e942e!2sBraj!5e0!3m2!1sen!2sin!4v1727025866811!5m2!1sen!2sin"
+                            width="600"
+                            height="450"
+                            style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                    <div className='text-lg flex flex-col items-left justify-center gap-4 mt-4'>
+                        <p><strong>Address:</strong> <br/>123 Main St, City, Country</p>
+                        <p><strong>Phone:</strong> <br/>(123) 456-7890</p>
+                        <p><strong>Email:</strong> <br/> info@example.com</p>
+                    </div>
+                </div>
             </div>
         </motion.div>
     );

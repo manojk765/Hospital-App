@@ -44,36 +44,35 @@ const whyChooseUs = [
 
 const Services = () => {
   return (
-    <div className='bg-gradient-to-r from-blue-100 to-green-100 p-16'>
-      <h1 className='text-black text-6xl max-w-[320px] mx-auto font-semibold p-4'>
+    <div className='bg-gradient-to-r from-blue-100 to-green-100 py-16 px-4'>
+      <h1 className='text-black text-6xl max-w-[320px] mx-auto font-semibold p-4 text-center'>
         Our <span className='text-[#1f4756] inline'>Services</span>
       </h1>
 
-      <div className='max-w-[1200px] mx-auto space-y-24 '>
+      <div className='max-w-[1200px] mx-auto space-y-24 mt-12'>
         {whyChooseUs.map((project, index) => (
           <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 75 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className={`flex ${index % 2 === 1 ? "flex-col-reverse md:flex-row-reverse gap-12" : "flex-col md:flex-row"} p-6 rounded-lg shadow-lg bg-white transform hover:-translate-y-1 transition-transform duration-300 `}  
-        >
-        
-            <div className='space-y-2 max-w-[550px]'>
-              <h2 className='text-7xl my-4 text-[#333]'>{`0${index + 1}`}</h2>
-              <h2 className='text-4xl font-bold text-[#1f4756]'>{project.title}</h2>
-              <p className='text-lg text-[#555] break-words p-4'>{project.description}</p>
-            </div>
-
-            <div className='flex items-center'>
+            key={index}
+            initial={{ opacity: 0, y: 75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className={`flex flex-col md:flex-row ${index % 2 === 1 ? "md:flex-row-reverse" : ""} gap-12 p-6 rounded-lg shadow-lg bg-white transform hover:-translate-y-1 transition-transform duration-300`}
+          >
+            <div className='flex-shrink-0'>
               <Image
                 src={project.src}
                 alt={`Image illustrating ${project.title}`}
-                className='h-[300px] w-auto object-cover rounded-lg shadow'
+                className='h-[300px] w-[300px] object-cover rounded-lg shadow-md'
                 width={300}
                 height={300}
               />
+            </div>
+
+            <div className='space-y-4'>
+              <h2 className='text-5xl my-4 text-[#333]'>{`0${index + 1}`}</h2>
+              <h2 className='text-3xl font-bold text-[#1f4756]'>{project.title}</h2>
+              <p className='text-lg text-[#555] p-4'>{project.description}</p>
             </div>
           </motion.div>
         ))}

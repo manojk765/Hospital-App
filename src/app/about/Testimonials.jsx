@@ -1,17 +1,17 @@
 'use client'; 
 
 import React from 'react';
-// Import Swiper React components
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/navigation'; 
 import 'swiper/css/autoplay';
 
-// Import required modules
+
 import { Navigation, Autoplay } from 'swiper/modules';
-import Image from 'next/image'; // Import the Image component
+import Image from 'next/image'; 
 
 export default function Testimonials() {
   const images = [
@@ -35,26 +35,26 @@ export default function Testimonials() {
         navigation={true}
         modules={[Navigation, Autoplay]}
         autoplay={{ delay: 5000 }} 
-        className="mySwiper w-full h-96 text-black"
+        className="mySwiper w-full min-h-96 h-[75vh] sm:h-[80vh] md:h-[90vh] lg:h-[75vh] xl:h-[75vh] 2xl:h-[60vh] text-black"
         slidesPerView={1}
         spaceBetween={0} 
       >
         {images.map((image, index) => (
           <SwiperSlide key={index} className='flex flex-col justify-center items-center relative'>
-            <div className="mb-4 flex justify-center items-center">
+             <div className="mb-4 flex justify-center items-center">
               <div className='w-32 h-32 relative'>
-                <Image
+                  <Image
                   src={image}
                   alt={`Slide ${index + 1}`}
                   layout='fill'
                   objectFit='cover'
                   className='rounded-full shadow-lg'
-                />
+                /> 
               </div>
             </div>
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-black text-center p-4 bg-opacity-70 mt-8"> 
-              <h1 className='text-3xl font-bold'>{head[index]}</h1>
-              <p className="text-lg font-semibold mt-2 max-w-xl">{texts[index]}</p>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-black text-center p-4 bg-opacity-70"> 
+              <h1 className='text-3xl font-bold md:text-4xl'>{head[index]}</h1>
+              <p className="text-lg font-semibold mt-2 max-w-xl md:text-xl">{texts[index]}</p>
             </div>
           </SwiperSlide>
         ))}
