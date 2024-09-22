@@ -1,5 +1,5 @@
-import About from '@/components/about'
-import Testimonials from '@/components/Testimonials'
+import About from './About'
+import Testimonials from './Testimonials'
 import React from 'react'
 
 function page() {
