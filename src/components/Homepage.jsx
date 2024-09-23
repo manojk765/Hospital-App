@@ -39,10 +39,10 @@ function Homepage() {
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
           </motion.div>
           <div>
-            <button className='px-6 py-3 rounded-lg ring-2 ring-gray-800 bg-gray-800 text-white hover:text-[#00fdaa] hover:ring-[#00fdaa] transition-all duration-300 relative group'>
+            {/* <button className='px-6 py-3 rounded-lg ring-2 ring-gray-800 bg-gray-800 text-white hover:text-[#00fdaa] hover:ring-[#00fdaa] transition-all duration-300 relative group'>
               Contact Us
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#00fdaa] transition-all duration-500 group-hover:w-full"></span>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
