@@ -23,7 +23,7 @@ const Footer = () => {
               Together, we strive to make a positive impact in our community, ensuring access to quality healthcare for all.
             </div>
           </div>
-          <div className='flex flex-wrap lg:mt-0 md:ml-4 space-x-4 mt-4 lg:mt-0'>
+          <div className='flex flex-wrap lg:mt-0 md:ml-4 space-x-4 mt-4'>
             <a href='https://facebook.com' className='hover:bg-[#1877F2] h-12 rounded-full p-2'>
               <Image src={Facebook} alt="Facebook" width={24} height={24} />
             </a>
