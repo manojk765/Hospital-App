@@ -14,13 +14,12 @@ const Footer = () => {
         <div className='flex flex-col lg:flex-row mt-4 mx-4 justify-center lg:justify-between'>
           <div className='flex flex-col lg:flex-row justify-center items-start lg:items-center'>
             <h3 className='text-3xl font-semibold hover:text-[#00fdaa]'>
-              Lorem Ipsum Hospitals
+              Vaarahi Hospitals
             </h3>
             <div className='text-left max-w-[30rem] ml-6 text-md mt-2 lg:mt-0'>
-              We are dedicated to providing exceptional healthcare with compassion and integrity. 
-              Our skilled team of professionals is committed to supporting your health and well-being through personalized care 
-              and innovative treatments. We believe in fostering a supportive environment where every patient feels valued and heard. 
-              Together, we strive to make a positive impact in our community, ensuring access to quality healthcare for all.
+            Our commitment is to deliver first-rate medical care with empathy and moral rectitude. 
+            Our goal is to create a welcoming atmosphere where each patient feels heard and respected. 
+            We work together to ensure that everyone has access to high-quality healthcare and to positively impact our community.
             </div>
           </div>
           <div className='flex flex-wrap lg:mt-0 md:ml-4 space-x-4 mt-4'>
@@ -50,7 +49,7 @@ const Footer = () => {
             Copyright @ 2024
           </div>
 
-          <div className='flex gap-4 sm:flex-row flex-col-reverse'>
+          <div className='flex gap-4 flex-col sm:flex-row'>
             <a href='/' className='hover:text-[#00fdaa]'>Home</a>
             <a href='/about' className='hover:text-[#00fdaa]'>About</a>
             <a href='/services' className='hover:text-[#00fdaa]'>Services</a>

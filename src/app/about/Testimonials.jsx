@@ -8,27 +8,30 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation'; 
 import 'swiper/css/autoplay';
+import Mission from './mission.png'
+import Vision from './vision.png'
+import Values from './values.png'
 
 
 import { Navigation, Autoplay } from 'swiper/modules';
 import Image from 'next/image'; 
 
-export default function Testimonials() {
-  const images = [
-    'https://images.unsplash.com/photo-1726352535850-dc9b4ff460ea?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',  
-    'https://images.unsplash.com/photo-1726309356095-e4c9be366c13?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D', 
-  ];
+export default function Testimonials() { 
+  const images = [ 
+    Vision,Mission,Values
+  ]; 
 
   const head = [
-    "Our Vision",
-    "Our Mission"
+    "Our Vision", 
+    "Our Mission",
+    "Our Values"
   ];
   
   const texts = [
     "To be a leading children's hospital recognized for excellence in pediatric healthcare, innovation, and compassionate family-centered care.",
-    "At our Hospital, our mission is to deliver exceptional healthcare services for children through advanced medical practices, a dedicated team of specialists, and a commitment to creating a safe and welcoming environment for our young patients and their families."
-  ];
-
+    "Our mission is to provide exceptional healthcare for children through advanced medical practices, a dedicated team of specialists, and a safe, welcoming environment for young patients and their families.",
+    "Every child and family at our hospital receives compassionate, honest care rooted in quality and integrity. We promote cooperation, respect, and advocacy to enhance the health and well-being of our young patients."  
+  ]
   return (
     <>
       <Swiper

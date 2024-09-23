@@ -20,27 +20,23 @@ const whyChooseUs = [
     description: "Our hospital is equipped with advanced technology and child-friendly environments designed to provide comfort and exceptional care.",
     src: "https://media.istockphoto.com/id/1454794642/photo/empty-corridor-hospital.webp?s=2048x2048&w=is&k=20&c=G5Sp6FTRKA-VIFqLTQmcIZwyMmlyh1OabpGC8Kx87IM="
   },
-  {
-    title: "Comprehensive Services",
+  {  
+    title: "Comprehensive Pediatric Services",
     description: "From routine check-ups to specialized surgeries, we offer a full range of pediatric services under one roof to meet every child’s health needs.",
     src: "https://media.istockphoto.com/id/1454794642/photo/empty-corridor-hospital.webp?s=2048x2048&w=is&k=20&c=G5Sp6FTRKA-VIFqLTQmcIZwyMmlyh1OabpGC8Kx87IM="
   },
   {
-    title: "Child-Friendly Environment",
-    description: "Our hospital is designed with young patients in mind, featuring colorful play areas and a warm atmosphere that helps reduce stress and anxiety.",
+    title: "Compassionate Care Team",
+    description: "Our compassionate staff is dedicated to creating a supportive environment, ensuring your child feels safe and comfortable during their visit.",
     src: "https://media.istockphoto.com/id/1454794642/photo/empty-corridor-hospital.webp?s=2048x2048&w=is&k=20&c=G5Sp6FTRKA-VIFqLTQmcIZwyMmlyh1OabpGC8Kx87IM="
   },
   {
     title: "24/7 Emergency Care",
     description: "We provide around-the-clock emergency services to ensure that your child gets the urgent care they need at any time.",
     src: "https://media.istockphoto.com/id/1454794642/photo/empty-corridor-hospital.webp?s=2048x2048&w=is&k=20&c=G5Sp6FTRKA-VIFqLTQmcIZwyMmlyh1OabpGC8Kx87IM="
-  },
-  {
-    title: "Supportive Care for Families",
-    description: "We offer counseling, accommodation, and emotional support services to ensure families are well-cared for throughout their child’s treatment.",
-    src: "https://cdn.wallpapersafari.com/40/83/rxpl2A.jpg"
   }
 ];
+
 
 const Services = () => {
   return (
