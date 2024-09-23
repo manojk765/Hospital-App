@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'xs': { 'max': '500px' }, // Add this for the custom range
+      },
     },
   },
   plugins: [],
