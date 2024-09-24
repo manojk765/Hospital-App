@@ -8,15 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        head: ['Cinzel'] , 
+        title:['Noto Serif'],
+        description:['Noto Sans'] ,
+        contact:['Raleway'],
+        nav:['Montserrat']
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
       screens: {
-        'xs': { 'max': '500px' }, // Add this for the custom range
+        'xs': { 'max': '500px' }, 
       },
-    },
+    },  
   },
-  plugins: [],
+  plugins: [], 
 };
 export default config;
+ 

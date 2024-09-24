@@ -5,15 +5,16 @@ import sample from './sample.jpg';
 import Image from 'next/image'; 
 import { motion } from 'framer-motion';
 
+
 function Homepage() {
   return (
     <>
 
-      <div className='flex flex-col h-screen px-4 sm:px-8 lg:px-20 xl:px-32 lg:flex-row lg:items-center bg-gradient-to-b from-blue-50 to-white'>
+      <div className=' flex flex-col h-screen px-4 sm:px-8 lg:px-20 xl:px-32 lg:flex-row lg:items-center bg-gradient-to-b from-blue-50 to-white '>
         {/* Image Section */}
         <div className='relative h-1/2 lg:h-{1000} sm:h-{400px} lg:w-1/2 w-full overflow-hidden'>
           <Image 
-            src={sample} 
+            src={sample}   
             alt="Sample Image" 
             layout="fill" 
             className='object-contain'
@@ -27,16 +28,16 @@ function Homepage() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1,y:0 }}
           transition={{ duration: 1}}
-          className='text-3xl sm:text-4xl lg:text-5xl xl:text-8xl font-bold'>
-              Vaarahi Hospitals
+          className='text-3xl sm:text-4xl lg:text-5xl xl:text-8xl font-bold font-head '>
+              Varahi Hospitals
           </motion.div>
-        
+          
         
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1,y:0 }}
             transition={{ duration: 1}} 
-            className='text-lg sm:text-xl lg:text-xl'>
+            className='text-lg sm:text-xl lg:text-xl font-description '>
             Welcome to our superspeciality childcare hospital, where every childs journey to health begins with a smile. Our caring team is here to sprinkle a little love and expertise into every checkup, making sure your little ones shine bright. Together, lets nurture a brighter future for our children, one healthy step at a time!
           </motion.div>
           <div>

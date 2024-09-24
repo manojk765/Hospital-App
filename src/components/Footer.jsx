@@ -9,12 +9,12 @@ import LinkedIn from './Images/linkedin.png';
 
 const Footer = () => {
   return (
-    <div className='bg-[#1c1b22] py-4 text-white'>
+    <div className='bg-[#1c1b22] py-4 text-white font-nav '>
       <div className='max-w-screen-xl mx-auto'>
         <div className='flex flex-col lg:flex-row mt-4 mx-4 justify-center lg:justify-between'>
           <div className='flex flex-col lg:flex-row justify-center items-start lg:items-center'>
             <h3 className='text-3xl font-semibold hover:text-[#00fdaa]'>
-              Vaarahi Hospitals
+              <a href='/'>Varahi Hospitals</a>
             </h3>
             <div className='text-left max-w-[30rem] ml-6 text-md mt-2 lg:mt-0'>
             Our commitment is to deliver first-rate medical care with empathy and moral rectitude. 

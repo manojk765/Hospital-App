@@ -38,7 +38,7 @@ export default function Testimonials() {
         navigation={true}
         modules={[Navigation, Autoplay]}
         autoplay={{ delay: 5000 }} 
-        className="mySwiper w-full min-h-96 h-[75vh] sm:h-[80vh] md:h-[90vh] lg:h-[75vh] xl:h-[75vh] 2xl:h-[60vh] text-black"
+        className="mySwiper w-full min-h-96 h-[75vh] sm:h-[80vh] md:h-[90vh] lg:h-[75vh] xl:h-[75vh] 2xl:h-[60vh] text-black mt-20"
         slidesPerView={1}
         spaceBetween={0} 
       >
@@ -56,8 +56,8 @@ export default function Testimonials() {
               </div>
             </div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-black text-center p-4 bg-opacity-70"> 
-              <h1 className='text-3xl font-bold md:text-4xl'>{head[index]}</h1>
-              <p className="text-lg font-semibold mt-2 max-w-xl md:text-xl">{texts[index]}</p>
+              <h1 className='text-3xl text-[#333333] md:text-4xl font-title'>{head[index]}</h1>
+              <p className="text-lg text-black mt-2 max-w-xl md:text-xl font-description">{texts[index]}</p>
             </div>
           </SwiperSlide>
         ))}

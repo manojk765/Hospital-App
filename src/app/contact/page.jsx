@@ -100,7 +100,7 @@ const ContactUs = () => {
 
     return (
         <motion.div
-            className="h-full p-4 lg:p-16 bg-gradient-to-br from-purple-50 to-pink-50"
+            className="h-full p-4 lg:p-16 bg-[#eaeff1] font-contact"
             initial={{ y: "-200vh" }}
             animate={{ y: "0%" }}
             transition={{ duration: 1 }}
@@ -189,7 +189,7 @@ const ContactUs = () => {
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
-                    <div className='text-lg flex flex-col items-left justify-center gap-4 mt-4'>
+                    <div className='text-lg flex flex-col items-left justify-center gap-4 mt-4 font-description'>
                         <p><strong>Address:</strong> <br/>123 Main St, City, Country</p>
                         <p><strong>Phone:</strong> <br/>(123) 456-7890</p>
                         <p><strong>Email:</strong> <br/> info@example.com</p>

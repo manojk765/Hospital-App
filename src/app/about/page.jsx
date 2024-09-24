@@ -4,7 +4,7 @@ import React from 'react'
 
 function page() {
   return (
-    <div className=' bg-gradient-to-b from-green-50 to-white'>
+    <div className=' bg-[#ffffff]'>
       <About/>
       <Testimonials/>
     </div>

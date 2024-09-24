@@ -40,9 +40,9 @@ const whyChooseUs = [
 
 const Services = () => {
   return (
-    <div className='bg-gradient-to-r from-blue-100 to-green-100 py-16 px-4'>
-      <h1 className='text-black text-6xl max-w-[320px] mx-auto font-semibold p-4 text-center'>
-        Our <span className='text-[#1f4756] inline'>Services</span>
+    <div className='bg-[#eaeff1] py-16 px-4'>
+      <h1 className='text-[#002c77] text-6xl  mx-auto p-4 text-center font-title '>
+        Our Services 
       </h1>
 
       <div className='max-w-[1200px] mx-auto space-y-24 mt-12'>
@@ -66,9 +66,9 @@ const Services = () => {
             </div>
 
             <div className='space-y-4'>
-              <h2 className='text-5xl my-4 text-[#333]'>{`0${index + 1}`}</h2>
-              <h2 className='text-3xl font-bold text-[#1f4756]'>{project.title}</h2>
-              <p className='text-lg text-[#555] p-4'>{project.description}</p>
+              <h2 className='text-5xl my-4 text-[#003a70]'>{`0${index + 1}`}</h2>
+              <h2 className='text-3xl font-title text-[#333333] font-semibold'>{project.title}</h2>
+              <p className='text-lg text-[#000] font-description p-4'>{project.description}</p>
             </div>
           </motion.div>
         ))}
