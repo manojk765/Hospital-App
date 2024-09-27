@@ -5,10 +5,10 @@ import { GiLifeSupport } from "react-icons/gi";
 import { FaHospital } from "react-icons/fa6";
 
 const images = [
-    <FaHospitalUser />,
-    <FaHandHoldingHeart />,
-    <GiLifeSupport />,
-    <FaHospital />
+    <FaHospitalUser key="hospital-user" />,
+    <FaHandHoldingHeart key="hand-holding-heart" />,
+    <GiLifeSupport key="life-support" />,
+    <FaHospital key="hospital" />
 ];
 
 const headings = [
@@ -41,7 +41,7 @@ function Info() {
 
         <div className='flex flex-row justify-center items-center bg-[#fafafa] flex-wrap mt-12'>
           {images.map((image, index) => (
-            <div key={index} className='m-4 p-6 w-72 h-72 flex flex-col items-center bg-white shadow-lg rounded-lg transform transition duration-500 hover:shadow-xl hover:-translate-y-2  m-30px'>
+            <div key={index} className='m-4 p-6 w-72 h-72 flex flex-col items-center bg-white shadow-lg rounded-lg transform transition duration-500 hover:shadow-xl hover:-translate-y-2'>
               <div className='text-5xl text-[#3f51b5] mb-4'>{image}</div>
               <h2 className='text-xl font-semibold'>{headings[index]}</h2>
               <p className='text-center max-w-[80%] text-lg font-light'>{explanation[index]}</p>
