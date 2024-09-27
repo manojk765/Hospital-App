@@ -17,7 +17,7 @@ function About() {
         <p className='text-2xl uppercase font-light text-gray-700 '>
           Welcome to Our Hospital - A Multispecialty Hospital for Children
         </p>
-        <p className='w-full md:w-3/5 text-lg md:text-2xl text-gray-600 font-description'>
+        <p className='w-full md:w-3/5 text-lg md:text-2xl text-gray-800 font-description'>
           At Our Hospital, we believe that every child deserves the highest quality of care in a nurturing environment. As a newly established multispecialty hospital for children, our mission is to provide comprehensive medical services tailored specifically for young patients, ensuring their health and wellbeing at every stage of childhood.
         </p>
       </motion.div>

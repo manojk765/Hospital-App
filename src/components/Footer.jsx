@@ -14,7 +14,7 @@ const Footer = () => {
         <div className='flex flex-col lg:flex-row mt-4 mx-4 justify-center lg:justify-between'>
           <div className='flex flex-col lg:flex-row justify-center items-start lg:items-center'>
             <h3 className='text-3xl font-semibold hover:text-[#00fdaa]'>
-              <a href='/'>Varahi Hospitals</a>
+              <a href='/'>Vaarahi Hospitals</a>
             </h3>
             <div className='text-left max-w-[30rem] ml-6 text-md mt-2 lg:mt-0'>
             Our commitment is to deliver first-rate medical care with empathy and moral rectitude. 

@@ -13,7 +13,8 @@ const config: Config = {
         title:['Noto Serif'],
         description:['Noto Sans'] ,
         contact:['Raleway'],
-        nav:['Montserrat']
+        nav:['Montserrat'],
+        info:['Poppins']
       },
       colors: {
         background: "var(--background)",
